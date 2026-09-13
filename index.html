@@ -1,67 +1,95 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Paiz</title>
-    <link rel="shortcut icon" href="favicon.png"/>
-    <meta name="color-scheme" content="light dark">
-    <style>
-        :root {
-            color-scheme: light dark;
-            --background: #fff;
-            --text: #111;
-            --link: #000;
-            --link-hover: #888;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --background: #111;
-                --text: #eee;
-                --link: #fff;
-                --link-hover: #ccc;
-            }
-        }
-
-        body {
-            background-color: var(--background);
-            color: var(--text);
-            font-family: monospace;
-            margin: 10px;
-            padding: 0;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        div#content {
-            margin: 50px auto;
-            max-width: 450px;
-        }
-
-        a {
-            color: var(--link);
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            transition: color 0.2s ease;
-        }
-
-        a:hover {
-            color: var(--link-hover);
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Mauricio Paiz — Photographer">
+<title>Mauricio Paiz — Photographer</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#f4f3f0;color:#111;font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:fixed;top:0;left:0;width:100%;z-index:10;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:difference;color:#fff}
+.logo,nav a,.label{font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+nav{display:flex;gap:25px}nav a{transition:opacity .25s}nav a:hover{opacity:.45}
+.hero{min-height:100svh;padding:90px 24px 45px;display:grid;place-items:center}
+.hero img{width:min(54vw,720px);height:84svh;object-fit:cover;display:block;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.hero img:hover{transform:scale(1.012)}
+.intro{padding:150px 28px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.intro h1,.about h2{font-size:clamp(48px,7vw,105px);line-height:.9;letter-spacing:-.065em;font-weight:400}
+.intro-copy{max-width:420px;align-self:end;font-size:15px;line-height:1.55}
+.work{padding:0 28px 160px}.section-head{border-top:1px solid rgba(17,17,17,.25);padding-top:10px;margin-bottom:65px;display:flex;justify-content:space-between}
+.project{margin-bottom:170px}.project-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px}
+.project-title{font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:400}
+.project-meta{color:#777;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.photo{width:100%;height:auto;display:block;transition:opacity .4s}.photo:hover{opacity:.9}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.about{border-top:1px solid rgba(17,17,17,.25);padding:150px 28px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.about-copy{max-width:470px;align-self:end;font-size:15px;line-height:1.55}
+.contact{min-height:78svh;border-top:1px solid rgba(17,17,17,.25);padding:90px 28px 30px;display:flex;flex-direction:column;justify-content:space-between}
+.contact h2{font-size:clamp(72px,13vw,190px);line-height:.82;letter-spacing:-.08em;font-weight:400}
+.contact-bottom{display:flex;justify-content:space-between;align-items:end}.email{font-size:17px}.social{font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+footer{border-top:1px solid rgba(17,17,17,.25);padding:18px 28px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+@media(max-width:700px){
+header{padding:18px}nav{gap:13px}.logo,nav a{font-size:9px}
+.hero{padding:75px 18px 25px}.hero img{width:100%;height:79svh}
+.intro{padding:100px 18px;display:block}.intro h1{margin-bottom:65px}
+.work{padding:0 18px 100px}.section-head{margin-bottom:42px}
+.project{margin-bottom:105px}.project-head{display:block}.project-meta{display:block;margin-top:7px}
+.pair{grid-template-columns:1fr;gap:18px}
+.about{padding:100px 18px;display:block}.about h2{margin-bottom:65px}
+.contact{min-height:65svh;padding:70px 18px 25px}.contact-bottom{display:block}.email{display:block;margin-bottom:25px}
+footer{padding:17px 18px}
+}
+</style>
 </head>
 <body>
-    <div id="content">
-        <h1>Mauricio Paiz</h1>
-        <p>
-            I’m a photographer based in Florida. You can find me on
-            <a href="https://instagram.com/mauriciopaiz">Instagram</a>.
-        </p>
-    </div>
-</body>
+<header>
+<a class="logo" href="#">Mauricio Paiz</a>
+<nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
 
+<main>
+<section class="hero"><img src="hero.jpg" alt="Mauricio Paiz — editorial portrait"></section>
+
+<section class="intro">
+<h1>Photography<br>for people,<br>places &amp;<br>stories.</h1>
+<div class="intro-copy"><p>Mauricio Paiz is a photographer working across beauty, fashion and editorial imagery. His work focuses on intimate portraits, natural light and contemporary visual storytelling.</p></div>
+</section>
+
+<section class="work" id="work">
+<div class="section-head"><span class="label">Selected Work</span><span class="label">2026</span></div>
+
+<article class="project">
+<div class="project-head"><h2 class="project-title">Beauty / Editorial</h2><span class="project-meta">Portrait</span></div>
+<img class="photo" src="hero.jpg" alt="Beauty editorial portrait">
+</article>
+
+<article class="project">
+<div class="project-head"><h2 class="project-title">Close / Personal</h2><span class="project-meta">Portraiture</span></div>
+<div class="pair"><img class="photo" src="hero.jpg" alt="Portrait detail"><img class="photo" src="hero.jpg" alt="Editorial portrait"></div>
+</article>
+
+<article class="project">
+<div class="project-head"><h2 class="project-title">Stories</h2><span class="project-meta">Editorial</span></div>
+<img class="photo" src="hero.jpg" alt="Editorial photography">
+</article>
+</section>
+
+<section class="about" id="about">
+<h2>About</h2>
+<div class="about-copy"><p>Mauricio Paiz is a photographer creating contemporary imagery with a focus on beauty, fashion and portraiture.</p><br><p>Available for editorial, commercial, fashion and creative projects.</p></div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Let's<br>work.</h2>
+<div class="contact-bottom">
+<a class="email" href="mailto:hello@mauriciopaiz.com">hello@mauriciopaiz.com</a>
+<a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
+</div>
+</section>
+</main>
+
+<footer><span>© 2026 Mauricio Paiz</span><span>Photography</span></footer>
+</body>
 </html>
